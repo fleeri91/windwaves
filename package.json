@@ -1,0 +1,19 @@
+{
+  "name": "windwaves",
+  "version": "1.0.0",
+  "description": "A React UI library made with TailwindCSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fleeri91/windwaves.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fleeri91/windwaves/issues"
+  },
+  "homepage": "https://github.com/fleeri91/windwaves#readme"
+}
