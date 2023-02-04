@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/fleeri91/windwaves/issues"
   },
-  "homepage": "https://github.com/fleeri91/windwaves#readme"
+  "homepage": "https://github.com/fleeri91/windwaves#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.14"
+  }
 }
