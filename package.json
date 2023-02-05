@@ -1,5 +1,5 @@
 {
-  "name": "windwaves",
+  "name": "@fleeri91/windwaves",
   "version": "1.0.0",
   "description": "A React UI library made with TailwindCSS.",
   "scripts": {
@@ -70,5 +70,8 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/fleeri91"
+  }
 }
