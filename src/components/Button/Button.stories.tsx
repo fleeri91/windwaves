@@ -1,23 +1,44 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Button from './Button';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import Button from "./Button";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'ReactComponentLibrary/Button',
+  title: "WindWaves/Button",
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const HelloWorld = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-HelloWorld.args = {
-  label: 'Hello world!',
+export const PrimaryButton = Template.bind({});
+
+PrimaryButton.args = {
+  children: "Primary",
+  variant: "primary",
+  disabled: false,
 };
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  label: 'Click me!',
+export const SecondaryButton = Template.bind({});
+
+SecondaryButton.args = {
+  children: "Secondary",
+  variant: "secondary",
+  disabled: false,
+};
+
+export const PrimaryButtonRounded = Template.bind({});
+
+PrimaryButtonRounded.args = {
+  children: "Primary Rounded",
+  variant: "primary",
+  disabled: false,
+  rounded: true,
+};
+
+export const SecondaryButtonRounded = Template.bind({});
+
+SecondaryButtonRounded.args = {
+  children: "Secondary Rounded",
+  variant: "secondary",
+  disabled: false,
+  rounded: true,
 };
