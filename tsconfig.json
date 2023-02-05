@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,6 +14,9 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@components": ["src/components"]
+    }
   }
 }
