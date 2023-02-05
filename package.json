@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/fleeri91/windwaves#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.27",
+    "rollup": "^3.14.0",
+    "rollup-plugin-dts": "^5.1.1",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.5"
   },
