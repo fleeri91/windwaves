@@ -1,11 +1,24 @@
-import '../dist/output.css';
+import "../dist/output.css";
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
+    },
+  },
+  options: {
+    storySort: {
+      order: [
+        "Intro",
+        "General",
+        "Layout",
+        "Navigation",
+        "Data Entry",
+        "Data Display",
+        "Feedback",
+      ],
     },
   },
 };
