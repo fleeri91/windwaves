@@ -4,7 +4,7 @@ import { ButtonVariants } from "src/types/Global";
 
 export interface ButtonProps {
   /** Button content. */
-  children?: React.ReactNode;
+  label?: string;
 
   /** Button variant. */
   variant?: ButtonVariants;
@@ -27,13 +27,13 @@ export interface ButtonProps {
 
 const ButtonVariantClasses = {
   primary:
-    "text-white bg-blue-500 border border-transparent hover:bg-blue-400 focus:ring-4 focus:ring-blue-300 disabled:hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 dark:disabled:hover:bg-blue-600",
+    "text-white bg-blue-500 border border-transparent hover:bg-blue-400 focus:ring-blue-300 disabled:bg-blue-500/80",
   secondary:
-    "text-white bg-slate-600 border border-transparent hover:bg-slate-500 focus:ring-4 focus:ring-slate-300 disabled:hover:bg-slate-700 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-900 dark:disabled:hover:bg-slate-600",
+    "text-white bg-slate-600 border border-transparent hover:bg-slate-500 focus:ring-slate-300 disabled:bg-slate-700",
 };
 
 const Button = ({
-  children,
+  label,
   variant = "primary",
   href,
   rounded,
@@ -49,12 +49,13 @@ const Button = ({
       disabled={disabled}
       href={href}
       className={clsx(
-        "group inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition-colors",
+        "group inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-4 disabled:cursor-not-allowed",
         variant && ButtonVariantClasses[variant],
-        rounded ? "rounded-full" : "rounded-lg"
+        rounded ? "rounded-full" : "rounded-lg",
+        loading && "cursor-progress"
       )}
     >
-      {children}
+      {label}
     </Component>
   );
 };
