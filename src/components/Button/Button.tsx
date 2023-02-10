@@ -29,7 +29,7 @@ const ButtonVariantClasses = {
   primary:
     "text-white bg-blue-500 border border-transparent hover:bg-blue-400 focus:ring-blue-300 disabled:bg-blue-500/80",
   secondary:
-    "text-white bg-slate-600 border border-transparent hover:bg-slate-500 focus:ring-slate-300 disabled:bg-slate-700",
+    "text-white bg-slate-600 border border-transparent hover:bg-slate-500 focus:ring-slate-300 disabled:bg-slate-600/80",
 };
 
 const Button = ({
@@ -49,7 +49,7 @@ const Button = ({
       disabled={disabled}
       href={href}
       className={clsx(
-        "group inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-4 disabled:cursor-not-allowed",
+        "group inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed",
         variant && ButtonVariantClasses[variant],
         rounded ? "rounded-full" : "rounded-lg",
         loading && "cursor-progress"
