@@ -1,2 +1,2 @@
-import { Grid, Cell } from "./Grid";
-export { Grid, Cell };
+import { Grid, Cell } from './Grid'
+export { Grid, Cell }

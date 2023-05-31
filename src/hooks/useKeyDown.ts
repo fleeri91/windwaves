@@ -1,23 +1,23 @@
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
 interface UseKeyDownProps {
-  key: string;
-  callback: () => void;
+  key: string
+  callback: () => void
 }
 
 const useKeyDown = ({ key, callback }: UseKeyDownProps) => {
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === key) {
-      callback();
+      callback()
     }
-  };
+  }
 
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown)
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [key, callback]);
-};
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [key, callback])
+}
 
-export default useKeyDown;
+export default useKeyDown

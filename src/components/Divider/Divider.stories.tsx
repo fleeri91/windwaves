@@ -7,9 +7,7 @@ export default {
   component: Divider,
 } as ComponentMeta<typeof Divider>
 
-const Template: ComponentStory<typeof Divider> = (args) => (
-  <Divider {...args}>{args.label}</Divider>
-)
+const Template: ComponentStory<typeof Divider> = (args) => <Divider {...args}>{args.label}</Divider>
 
 export const Default = Template.bind({})
 

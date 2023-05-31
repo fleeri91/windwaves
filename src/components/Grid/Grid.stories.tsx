@@ -1,11 +1,11 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Grid, Cell } from "./Grid";
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Grid, Cell } from './Grid'
 
 export default {
-  title: "WindWaves/Layout/Grid",
+  title: 'WindWaves/Layout/Grid',
   component: Grid,
-} as ComponentMeta<typeof Grid>;
+} as ComponentMeta<typeof Grid>
 
 const Template: ComponentStory<typeof Grid> = (args) => (
   <Grid {...args} classname="h-16">
@@ -19,10 +19,10 @@ const Template: ComponentStory<typeof Grid> = (args) => (
       <div className="h-full w-full bg-red-400" />
     </Cell>
   </Grid>
-);
+)
 
-export const PrimaryGrid = Template.bind({});
+export const PrimaryGrid = Template.bind({})
 
 PrimaryGrid.args = {
   cols: 3,
-};
+}

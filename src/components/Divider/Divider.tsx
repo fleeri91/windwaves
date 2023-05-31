@@ -25,9 +25,7 @@ const Divider = ({ label, orientation }: DividerProps): JSX.Element => {
         orientation ? OrientationClasses[orientation] : 'border'
       )}
     >
-      {label && orientation && (
-        <span className={clsx('inline-block px-4')}>{label}</span>
-      )}
+      {label && orientation && <span className={clsx('inline-block px-4')}>{label}</span>}
     </div>
   )
 }

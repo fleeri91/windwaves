@@ -1,63 +1,57 @@
-import React from "react";
-import clsx from "clsx";
-import { ButtonVariants } from "src/types/Global";
+import React from 'react'
+import clsx from 'clsx'
+import { ButtonVariants } from 'src/types/Global'
 
 export interface ButtonProps {
   /** Button content. */
-  label?: string;
+  label?: string
 
   /** Button variant. */
-  variant?: ButtonVariants;
+  variant?: ButtonVariants
 
   /** Link path. Button will be represented as an anchor element instead. */
-  href?: string;
+  href?: string
 
   /** If the button should be rounded. */
-  rounded?: boolean;
+  rounded?: boolean
 
   /** If the button should be disabled. */
-  disabled?: boolean;
+  disabled?: boolean
 
   /** If the button be in loading state. */
-  loading?: boolean;
+  loading?: boolean
 
   /** On click handler. */
-  onClick?: () => void;
+  onClick?: () => void
 }
 
 const ButtonVariantClasses = {
   primary:
-    "text-white bg-blue-500 border border-transparent hover:bg-blue-400 focus:ring-blue-300 disabled:bg-blue-500/80",
+    'text-white bg-blue-500 border border-transparent hover:bg-blue-400 focus:ring-blue-300 disabled:bg-blue-500/80',
   secondary:
-    "text-white bg-slate-600 border border-transparent hover:bg-slate-500 focus:ring-slate-300 disabled:bg-slate-600/80",
-};
+    'text-white bg-slate-600 border border-transparent hover:bg-slate-500 focus:ring-slate-300 disabled:bg-slate-600/80',
+}
 
-const Button = ({
-  label,
-  variant = "primary",
-  href,
-  rounded,
-  disabled,
-  loading,
-}: ButtonProps) => {
-  const isLink = typeof href !== "undefined";
-  const Component = isLink ? "a" : "button";
+const Button = ({ label, variant = 'primary', href, rounded, disabled, loading, onClick }: ButtonProps) => {
+  const isLink = typeof href !== 'undefined'
+  const Component = isLink ? 'a' : 'button'
 
   return (
     <Component
-      type={isLink ? undefined : "button"}
+      type={isLink ? undefined : 'button'}
       disabled={disabled}
       href={href}
+      onClick={onClick}
       className={clsx(
-        "group inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed",
+        'group inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed',
         variant && ButtonVariantClasses[variant],
-        rounded ? "rounded-full" : "rounded-lg",
-        loading && "cursor-progress"
+        rounded ? 'rounded-full' : 'rounded-lg',
+        loading && 'cursor-progress'
       )}
     >
       {label}
     </Component>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

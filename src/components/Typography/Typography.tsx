@@ -1,7 +1,8 @@
+/** Library import */
 import React from 'react'
 import clsx from 'clsx'
 
-type Tags = 'mega' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
+type Tags = 'mega' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'preamble' | 'p'
 
 export interface TypographyProps {
   /** */
@@ -30,7 +31,7 @@ const TagMapper = {
   h3: 'h3',
   h4: 'h4',
   h5: 'h5',
-  h6: 'h6',
+  preamble: 'p',
   p: 'p',
 }
 
@@ -41,7 +42,7 @@ const Margin = {
   h3: 'mb-10',
   h4: 'mb-8',
   h5: 'mb-6',
-  h6: 'mb-4',
+  preamble: 'mb-4',
   p: 'mb-2',
 }
 
@@ -52,18 +53,11 @@ const TypograhyClasses = {
   h3: 'font-semibold text-3xl sm:text-4xl',
   h4: 'font-semibold text-2xl sm:text-3xl',
   h5: 'font-semibold text-xl sm:text-2xl',
-  h6: 'font-medium text-base sm:text-lg',
+  preamble: 'font-medium text-base sm:text-lg',
   p: 'text-sm sm:text-base',
 }
 
-const Typography = ({
-  children,
-  as,
-  styleAs,
-  italic,
-  marginBottom,
-  className,
-}: TypographyProps): JSX.Element => {
+const Typography = ({ children, as, styleAs, italic, marginBottom, className }: TypographyProps): JSX.Element => {
   const Component: any = TagMapper[as]
 
   return (
