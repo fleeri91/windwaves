@@ -7,7 +7,9 @@
     "rollup": "rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "tw:watch": "npx tailwindcss -i ./src/style/tailwind.css -o ./dist/output.css --watch"
+    "tw:watch": "npx tailwindcss -i ./src/style/tailwind.css -o ./dist/output.css --watch",
+    "prettier": "prettier --write ./**/*.{ts,tsx}",
+    "new": "plop"
   },
   "repository": {
     "type": "git",
@@ -71,5 +73,8 @@
   "types": "dist/index.d.ts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/fleeri91"
+  },
+  "dependencies": {
+    "plop": "^3.1.2"
   }
 }
