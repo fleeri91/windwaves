@@ -3,26 +3,26 @@ import React from 'react'
 import clsx from 'clsx'
 
 /** Type import */
-import { Size } from 'src/types/Global'
+import { GridSize } from 'src/types/Global'
 
 export interface GridProps {
   /** Content rendered as children */
   children: React.ReactNode
 
   /** Grid columns */
-  cols?: Size
+  cols?: GridSize
 
   /** Grid columns 2xl */
-  cols2Xl?: Size
+  cols2Xl?: GridSize
 
   /** Grid columns xl */
-  colsXl?: Size
+  colsXl?: GridSize
 
   /** Grid columns lg */
-  colsLg?: Size
+  colsLg?: GridSize
 
   /** Grid columns md */
-  colsMd?: Size
+  colsMd?: GridSize
 
   /** Grid flow */
   flow?: 'row' | 'col'
@@ -37,19 +37,19 @@ export interface CellProps {
   children: React.ReactNode
 
   /** Cell span */
-  span?: Size
+  span?: GridSize
 
   /** Grid columns 2xl */
-  span2Xl?: Size
+  span2Xl?: GridSize
 
   /** Grid columns xl */
-  spanXl?: Size
+  spanXl?: GridSize
 
   /** Grid columns lg */
-  spanLg?: Size
+  spanLg?: GridSize
 
   /** Grid columns md */
-  spanMd?: Size
+  spanMd?: GridSize
 
   /** If content should be centered */
   center?: boolean
