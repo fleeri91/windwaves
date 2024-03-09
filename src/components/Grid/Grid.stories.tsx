@@ -1,28 +1,29 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Grid, Cell } from './Grid'
 
-export default {
+const meta: Meta<typeof Grid> = {
   title: 'WindWaves/Layout/Grid',
   component: Grid,
-} as ComponentMeta<typeof Grid>
+  render: ({ ...args }) => (
+    <Grid {...args} classname="h-16">
+      <Cell>
+        <div className="h-full w-full bg-red-400" />
+      </Cell>
+      <Cell>
+        <div className="h-full w-full bg-red-400" />
+      </Cell>
+      <Cell>
+        <div className="h-full w-full bg-red-400" />
+      </Cell>
+    </Grid>
+  ),
+}
+export default meta
 
-const Template: ComponentStory<typeof Grid> = (args) => (
-  <Grid {...args} classname="h-16">
-    <Cell>
-      <div className="h-full w-full bg-red-400" />
-    </Cell>
-    <Cell>
-      <div className="h-full w-full bg-red-400" />
-    </Cell>
-    <Cell>
-      <div className="h-full w-full bg-red-400" />
-    </Cell>
-  </Grid>
-)
+type Story = StoryObj<typeof Grid>
 
-export const PrimaryGrid = Template.bind({})
-
-PrimaryGrid.args = {
-  cols: 3,
+export const Default: Story = {
+  args: {
+    cols: 3,
+  },
 }
