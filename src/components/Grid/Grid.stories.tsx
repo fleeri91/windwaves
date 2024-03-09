@@ -4,8 +4,11 @@ import { Grid, Cell } from './Grid'
 const meta: Meta<typeof Grid> = {
   title: 'WindWaves/Layout/Grid',
   component: Grid,
+  parameters: {
+    controls: { exclude: ['children', 'className'] },
+  },
   render: ({ ...args }) => (
-    <Grid {...args} classname="h-16">
+    <Grid {...args} className="h-16">
       <Cell>
         <div className="h-full w-full bg-red-400" />
       </Cell>

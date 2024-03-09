@@ -17,5 +17,7 @@ export const Primary: Story = {
     label: 'Primary',
     variant: 'primary',
     disabled: false,
+    rounded: false,
+    loading: false,
   },
 }

@@ -28,7 +28,7 @@ export interface GridProps {
   flow?: 'row' | 'col'
 
   /** Additional styling */
-  classname?: string
+  className?: string
 }
 
 /** Cell properties */
@@ -230,7 +230,7 @@ const flowClasses = {
 }
 
 /** Grid component */
-const Grid = ({ children, cols, cols2Xl, colsXl, colsLg, colsMd, flow, classname }: GridProps): JSX.Element => {
+const Grid = ({ children, cols, cols2Xl, colsXl, colsLg, colsMd, flow, className }: GridProps): JSX.Element => {
   return (
     <div
       className={clsx(
@@ -241,7 +241,7 @@ const Grid = ({ children, cols, cols2Xl, colsXl, colsLg, colsMd, flow, classname
         colsLg && colsLgClasses[colsLg],
         colsMd && colsMdClasses[colsMd],
         flow && flowClasses[flow],
-        classname
+        className
       )}
     >
       {children}
