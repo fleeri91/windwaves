@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
 
   addons: [
     '@storybook/addon-links',
@@ -9,11 +9,11 @@ module.exports = {
   ],
 
   framework: {
-    name: "@storybook/react-webpack5",
-    options: {}
+    name: '@storybook/react-webpack5',
+    options: {},
   },
 
   docs: {
-    autodocs: true
-  }
-};
+    autodocs: true,
+  },
+}
