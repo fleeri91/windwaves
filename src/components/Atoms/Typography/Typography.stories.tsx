@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Typography from './Typography'
 
 const meta: Meta<typeof Typography> = {
-  title: 'WindWaves/General/Typography',
+  title: '3. Library/Atoms/Typography',
   component: Typography,
   parameters: {
     controls: { exclude: ['className'] },

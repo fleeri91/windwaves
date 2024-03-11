@@ -1,0 +1,33 @@
+export declare const DEFAULT_COLOR: Color;
+export declare const WHITE = "white";
+export declare const TRANSPARENT = "transparent";
+export declare function makeClassName(componentName: string): (className: string) => string;
+declare const colorValues: readonly ["slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber", "yellow", "lime", "green", "emerald", "teal", "cyan", "sky", "blue", "indigo", "violet", "purple", "fuchsia", "pink", "rose"];
+export type Color = (typeof colorValues)[number];
+export type CustomColor = Color | string;
+export declare const getIsBaseColor: (color: Color | string) => boolean;
+export declare const BaseColors: {
+    [key: string]: Color;
+};
+export declare const themeColorRange: Color[];
+export declare const colorPalette: {
+    canvasBackground: number;
+    lightBackground: number;
+    background: number;
+    darkBackground: number;
+    darkestBackground: number;
+    lightBorder: number;
+    border: number;
+    darkBorder: number;
+    lightRing: number;
+    ring: number;
+    iconRing: number;
+    lightText: number;
+    text: number;
+    iconText: number;
+    darkText: number;
+    darkestText: number;
+    icon: number;
+};
+export declare function getColorClassNames(color: Color | string, shade?: number): ColorClassNames;
+export {};

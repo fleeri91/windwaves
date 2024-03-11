@@ -1,14 +1,15 @@
 import { MouseEventHandler } from 'react'
 import clsx from 'clsx'
 
-import { ButtonVariants } from 'src/types/Global'
+import { Colors } from 'src/types/Tailwind'
+import { getColorClassNames } from 'src/lib/utils/theme'
 
 export interface ButtonProps {
   /** Button content. */
   label?: string
 
-  /** Button variant. */
-  variant?: ButtonVariants
+  /** Button color. */
+  color?: Colors
 
   /** Link path. Button will be represented as an anchor element instead. */
   href?: string
@@ -26,14 +27,16 @@ export interface ButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>
 }
 
+/*
 const ButtonVariantClasses = {
   primary:
     'text-white bg-blue-500 border border-transparent hover:bg-blue-400 focus:ring-blue-300 disabled:bg-blue-500/50',
   secondary:
     'text-white bg-slate-600 border border-transparent hover:bg-slate-500 focus:ring-slate-300 disabled:bg-slate-600/50',
 }
+*/
 
-const Button = ({ label, variant = 'primary', href, rounded, disabled, loading, onClick }: ButtonProps) => {
+const Button = ({ label, color = 'red', href, rounded, disabled, loading, onClick }: ButtonProps) => {
   const isLink = typeof href !== 'undefined'
   const Component = isLink ? 'a' : 'button'
 
@@ -45,9 +48,9 @@ const Button = ({ label, variant = 'primary', href, rounded, disabled, loading, 
       onClick={onClick}
       className={clsx(
         'group inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed',
-        variant && ButtonVariantClasses[variant],
         rounded ? 'rounded-full' : 'rounded-lg',
-        loading && 'cursor-progress'
+        loading && 'cursor-progress',
+        getColorClassNames('white').textColor
       )}
     >
       {loading && (

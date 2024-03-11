@@ -3,7 +3,7 @@ import React from 'react'
 import clsx from 'clsx'
 
 /** Type import */
-import { GridSize } from 'src/types/Global'
+import { GridSize } from 'src/types/Tailwind'
 
 export interface GridProps {
   /** Content rendered as children */
