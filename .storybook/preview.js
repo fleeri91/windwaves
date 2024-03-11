@@ -10,7 +10,14 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['1. Documentations', '2. Theme', '3. Layout', '4. Library', ['Atoms', 'Molecules', 'Organisms']],
+      order: [
+        '1. Documentations',
+        ['Introduction', 'Conventions'],
+        '2. Theme',
+        '3. Layout',
+        '4. Library',
+        ['Atoms', 'Molecules', 'Organisms'],
+      ],
     },
   },
 }

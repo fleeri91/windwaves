@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Button from './Button'
 
 const meta: Meta<typeof Button> = {
-  title: '3. Library/Atoms/Button',
+  title: '4. Library/Atoms/Button',
   component: Button,
   parameters: {
     controls: { exclude: ['className', 'onClick', 'href'] },

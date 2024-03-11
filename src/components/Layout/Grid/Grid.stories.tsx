@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Grid, Cell } from './Grid'
 
 const meta: Meta<typeof Grid> = {
-  title: '3. Library/Atoms/Grid',
+  title: '3. Layout/Grid',
   component: Grid,
   parameters: {
     controls: { exclude: ['children', 'className'] },

@@ -2,8 +2,6 @@ import { MouseEventHandler } from 'react'
 import clsx from 'clsx'
 
 import { Colors } from 'src/types/Tailwind'
-import { getColorClassNames } from 'src/lib/utils/theme'
-
 export interface ButtonProps {
   /** Button content. */
   label?: string
@@ -49,8 +47,7 @@ const Button = ({ label, color = 'red', href, rounded, disabled, loading, onClic
       className={clsx(
         'group inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed',
         rounded ? 'rounded-full' : 'rounded-lg',
-        loading && 'cursor-progress',
-        getColorClassNames('white').textColor
+        loading && 'cursor-progress'
       )}
     >
       {loading && (

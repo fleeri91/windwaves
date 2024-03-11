@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Toggle from './Toggle'
 
 const meta: Meta<typeof Toggle> = {
-  title: '3. Library/Atoms/Toggle',
+  title: '4. Library/Atoms/Toggle',
   component: Toggle,
   argTypes: {},
   parameters: {
